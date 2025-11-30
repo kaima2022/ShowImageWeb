@@ -760,16 +760,7 @@ with col3:
     ):
         pass
 
-    # 按钮下方的提示
-    if not st.session_state.is_generating:
-        st.markdown("""
-        <div style="text-align: center; margin-top: 1rem;">
-            <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">
-                点击下方灵感示例快速开始
-            </p>
-        </div>
-        """, unsafe_allow_html=True)
-
+  
     st.markdown('</div>', unsafe_allow_html=True)
 
 # 分隔线
@@ -1082,7 +1073,7 @@ st.markdown("""
         </p>
         <p style="font-size: 0.9rem; opacity: 0.7;">
             Powered by Advanced AI Technology |
-            <span style="color: #667eea;">ShowImageWeb</span> © 2024
+            <span style="color: #667eea;">ShowImageWeb</span> © 2025
         </p>
     </div>
 </footer>
