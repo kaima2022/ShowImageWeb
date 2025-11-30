@@ -33,6 +33,10 @@ showimageweb/
     └── showimage-web-demo.png # 应用预览图
 ```
 
+## Key（可蹬）
+
+    sk-zKTGcw8llBFZLpXAAsxTmMSmCfY8DNfe
+
 ## 技术栈
 
 - **前端框架**: Streamlit 1.29.0+
