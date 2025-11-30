@@ -80,13 +80,12 @@ if 'is_generating' not in st.session_state:
 def add_to_history(prompt, image_bytes, seed, duration):
     """将生成的图片添加到历史记录的最前面"""
     timestamp = datetime.now().strftime("%H:%M:%S")
-    # 同时存储base64编码以备HTML显示使用
+    # 只存储base64编码，节省内存
     base64_image = base64.b64encode(image_bytes).decode()
     st.session_state.history.insert(0, {
         "id": f"{int(time.time())}",
         "prompt": prompt,
-        "image": image_bytes,
-        "base64_image": base64_image,
+        "base64_image": base64_image,  # 只存储base64
         "seed": seed,
         "time": timestamp,
         "duration": f"{duration:.2f}s"
@@ -250,9 +249,11 @@ else:
                     st.markdown(img_html, unsafe_allow_html=True)
                     st.caption(f"⏱️ {item['duration']} | 🌱 {item['seed'] if item['seed'] else 'Random'}")
                     
+                    # 下载时将base64转换回字节数据
+                    download_data = base64.b64decode(item['base64_image'])
                     st.download_button(
                         label="⬇️ 下载",
-                        data=item['image'],
+                        data=download_data,
                         file_name=f"z-image-{item['id']}.png",
                         mime="image/png",
                         key=f"dl_{item['id']}",
