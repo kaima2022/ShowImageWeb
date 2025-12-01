@@ -1203,25 +1203,20 @@ else:
                 </div>
                 """, unsafe_allow_html=True)
 
-                # 按钮区域：移除 + 下载
-                col_remove, col_download = st.columns([1, 1])
+                # 按钮区域：保存/移除 + 下载
+                col_save_remove, col_download = st.columns([1, 1])
 
-                with col_remove:
+                with col_save_remove:
                     if is_temp_item:
-                        # 临时作品显示移除按钮
+                        # 临时作品显示保存按钮
                         if st.button(
-                            f"🗑️ 移除",
-                            key=f"remove_temp_{item['id']}",
+                            f"💾 保存",
+                            key=f"save_{item['id']}",
                             use_container_width=True,
-                            help="从画廊中移除此临时作品"
+                            help="将此作品永久保存"
                         ):
-                            # 从历史记录中移除
-                            for i, hist_item in enumerate(st.session_state.history):
-                                if hist_item["id"] == item['id']:
-                                    st.session_state.history.pop(i)
-                                    st.toast("🗑️ 作品已从画廊移除", icon="✅")
-                                    st.rerun()
-                                    break
+                            if save_temp_to_gallery(item['id']):
+                                st.rerun()
                     else:
                         # 永久作品显示移除按钮
                         if st.button(
