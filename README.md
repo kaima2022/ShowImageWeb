@@ -76,7 +76,7 @@ docker compose up -d
 ```bash
 # 克隆项目
 git clone https://github.com/kaima2022/showimageweb.git
-cd showimageweb
+cd ShowImageWeb
 
 # 安装依赖
 pip install -r requirements.txt
