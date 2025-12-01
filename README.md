@@ -13,8 +13,7 @@
 
 </div>
 
-AI图像生成网页交互平台 - 基于Streamlit构建的Web应用，提供简洁的用户界面和实用的图像生成功能
-
+AI图像生成网页交互平台 - 基于Streamlit构建的Web应用，提供简洁的用户界面和实用的图像生成功能 - **对手机UI界面进行了优化**
 ## 应用预览
 
 ![ShowImageWeb Demo](assets/showimage-web-demo.png)
@@ -58,25 +57,25 @@ showimageweb/
 
 ## 快速开始
 
-## 部署方式
+## 使用方式
 
-### 方式一：Docker 部署（推荐）
+### 方式一：Docker 部署（灵活）
 
 ```bash
 # 克隆项目
 git clone https://github.com/kaima2022/showimageweb.git
-cd showimageweb
+cd ShowImageWeb
 
 # 使用 Docker Compose 启动
 docker compose up -d
 ```
 
-### 方式二：本地部署
+### 方式二：非容器化直接运行（快速）
 
 ```bash
 # 克隆项目
 git clone https://github.com/kaima2022/showimageweb.git
-cd showimageweb
+cd ShowImageWeb
 
 # 安装依赖
 pip install -r requirements.txt
