@@ -46,9 +46,11 @@ showimageweb/
     └── showimage-web-demo.png # 应用预览图
 ```
 
-## Key（可蹬）
+## Key（已失效）
+~~sk-zKTGcw8llBFZLpXAAsxTmMSmCfY8DNfe~~
+### 可选择不同供应商的生图服务
+#### 如方舟(https://ai.gitee.com/iokzahzc/dashboard/settings/tokens)
 
-    sk-zKTGcw8llBFZLpXAAsxTmMSmCfY8DNfe
 
 ## 技术栈
 
